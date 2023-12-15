@@ -66,4 +66,4 @@ ENV DISPLAY=:1
 
 RUN echo source /ros2_ws/install/setup.bash >> ~/.bashrc
 
-CMD /bin/bash -c "source install/setup.bash; ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True"
+#CMD /bin/bash -c "source install/setup.bash; ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True"
