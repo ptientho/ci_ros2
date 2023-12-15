@@ -30,8 +30,7 @@ pipeline {
           }
           stage('Test waypoints server') {
               steps {
-                  sh '
-                  sudo docker run --rm -v /tmp/.X11-unix/:/tmp/.X11-unix/ ci:ros2 /bin/bash -c "ros2 run tortoisebot_waypoints tortoisebot_waypoints_action_server_node; colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"'
+                  sh 'sudo docker run --rm -v /tmp/.X11-unix/:/tmp/.X11-unix/ ci:ros2 /bin/bash -c "ros2 run tortoisebot_waypoints tortoisebot_waypoints_action_server_node; colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"'
                     
               }
           }
