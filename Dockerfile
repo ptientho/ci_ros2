@@ -51,6 +51,9 @@ RUN git clone -b ros2-galactic --recursive https://github.com/rigbetellabs/torto
 RUN git clone https://github.com/ptientho/tortoisebot_waypoints_ros2.git
 RUN git clone https://github.com/ptientho/tortoisebot_waypoints_interface_ros2.git
 
+# copy gazebo.launch.py
+COPY gazebo.launch.py tortoisebot/tortoisebot_gazebo/launch/
+
 # ignore tortoisebot_control build process
 RUN touch tortoisebot/tortoisebot_control/COLCON_IGNORE
 
@@ -63,5 +66,4 @@ ENV DISPLAY=:1
 
 RUN echo source /ros2_ws/install/setup.bash >> ~/.bashrc
 
-# launch Gazebo
 CMD /bin/bash -c "source install/setup.bash; ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True"
