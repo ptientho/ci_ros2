@@ -11,7 +11,7 @@
 
     Now you are inside Jenkins!
 
-# Push code to ros1_ci repository
+# Push code to this repository
 
 1.  ```cd ~/ros2_ws/src/ros2_ci```
 2.  ```git commit -m"Test #n"``` where n = number of test. You can do a modification before commiting
